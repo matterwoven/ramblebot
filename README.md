@@ -19,6 +19,7 @@ You may:
 - You are allowed to use search engines (e.g. "find the last character of a string in Java"). If you copy a small line you found in a search, you must provide a link to where you found it in a comment, AND you must be prepared to thoroughly explain it. If you don't understand it, don't use it!
 
 ### Commits
+<!-- Speaking of commits, I've been told to change a line here -->
 
 YOU ARE EXPECTED TO MAKE SMALL, FREQUENT COMMITS. Doing so is good practice and helps me see that it's less likely you pasted in a large part of your solution from elsewhere.
 

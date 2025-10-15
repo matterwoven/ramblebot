@@ -35,7 +35,7 @@ class UnigramWordPredictorTest {
         predictor.train(null); // The scanner input is ignored by FakeTokenizer
 
         // Sort the actual lists to ensure order does not affect comparison
-        for (List<String> values : neighborMap.values()) {
+        for (List<String> values : neighborMap.values()){
             values.sort(null); // Sort alphabetically
         }
 

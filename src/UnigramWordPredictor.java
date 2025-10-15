@@ -57,6 +57,7 @@ public class UnigramWordPredictor implements WordPredictor {
     for (int i = 0; i < trainingWords.size() - 1; i++) {
       String currentWord = trainingWords.get(i);
       String nextWord = trainingWords.get(i + 1);
+      // Neighbor map needs to be a list of resulting Strings in the values area, that's where the error is getting thrown from my observations
 
       // Inputs an empty value while we wait for the rest of the process
       neighborMap.putIfAbsent(currentWord, new LinkedList<>());

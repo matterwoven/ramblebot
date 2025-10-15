@@ -1,8 +1,8 @@
-import org.junit.jupiter.api.Test;
+// import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import static org.junit.jupiter.api.Assertions.*;
+// import static org.junit.jupiter.api.Assertions.*;
 
 class UnigramWordPredictorTest {
 
@@ -33,7 +33,6 @@ class UnigramWordPredictorTest {
         UnigramWordPredictor predictor = new UnigramWordPredictor(fakeTokenizer);
         
         predictor.train(null); // The scanner input is ignored by FakeTokenizer
-        Map<String, List<String>> neighborMap = predictor.getNeighborMap();
 
         // Sort the actual lists to ensure order does not affect comparison
         for (List<String> values : neighborMap.values()) {

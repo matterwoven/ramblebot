@@ -61,9 +61,9 @@ public class UnigramWordPredictor implements WordPredictor {
 
       // Inputs an empty value while we wait for the rest of the process
       neighborMap.putIfAbsent(currentWord, new LinkedList<>());
-      if (!nextWord.isEmpty()){
-        neighborMap.get(currentWord).add(nextWord);
-      }
+      // if (!nextWord.isEmpty()){
+      neighborMap.get(currentWord).add(nextWord);
+      // }
     }
   }
     // TODO: Convert the trainingWords into neighborMap here

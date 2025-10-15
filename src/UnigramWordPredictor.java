@@ -52,24 +52,19 @@ public class UnigramWordPredictor implements WordPredictor {
   public void train(Scanner scanner) {
     List<String> trainingWords = tokenizer.tokenize(scanner);
     // Key is word, value is the list of values that appeared after it
-    Map<String, List<String>> neighborMap = new HashMap<>();
-    String lastWord = "";
-    for (String word : trainingWords) {
-      // Checking if map does not contain the key
-      if (!neighborMap.containsKey(word) && !lastWord.isBlank()) {
-        // Inputs an empty value while we wait for the next word to be processed
-        neighborMap.put(word, new LinkedList<>());
-      }
-      else {
-        List<String> storedMap = neighborMap.get(lastWord);
-        storedMap.add(word);
-      }
-      if (!lastWord.isEmpty()){
-        lastWord = word;
+    neighborMap = new HashMap<>();
+    for (int i = 0; i < trainingWords.size() - 1; i++) {
+      String currentWord = trainingWords.get(i);
+      String nextWord = trainingWords.get(i + 1);
+
+      // Inputs an empty value while we wait for the rest of the process
+      neighborMap.putIfAbsent(currentWord, new LinkedList<>());
+      if (!nextWord.isEmpty()){
+        neighborMap.get(currentWord).add(nextWord);
       }
     }
-    // TODO: Convert the trainingWords into neighborMap here
   }
+    // TODO: Convert the trainingWords into neighborMap here
 
   /**
    * Predicts the next word based on the given context.

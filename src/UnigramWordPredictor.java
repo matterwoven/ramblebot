@@ -63,9 +63,9 @@ public class UnigramWordPredictor implements WordPredictor {
       neighborMap.putIfAbsent(currentWord, new LinkedList<>());
       // if (!nextWord.isEmpty()){
       neighborMap.get(currentWord).add(nextWord);
-      // }
     }
   }
+      // }
     // TODO: Convert the trainingWords into neighborMap here
 
   /**

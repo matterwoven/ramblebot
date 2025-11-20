@@ -104,7 +104,7 @@ Consider doing any of the following (some are very hard!):
 - Adding more tests to the classes you implemented
 - Testing `RambleApp`
 - Creating a Bigram predictor
-- Making your Unigram predictor memory-efficient.
+- Making your Unigram predictor memory-efficient (hint: consider how you can avoid keeping redundant copies of words)
 - Making RambleApp memory-efficient
 - Anything else you find interesting!
 
